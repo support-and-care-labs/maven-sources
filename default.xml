@@ -24,6 +24,7 @@
   <remote name='sisu'    fetch='https://github.com/eclipse-sisu' />
   <default revision='master' remote='origin' sync-j='8' />
 
+  <project path='.'                                         name='maven-sources.git' />
   <project path='site'                                      name='maven-site.git' />
 
   <project path='core/build-cache'                          name='maven-build-cache-extension.git' />
