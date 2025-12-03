@@ -27,16 +27,29 @@ under the License.
     <artifactId>maven-aggregator</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>studies</artifactId>
+  <artifactId>shared</artifactId>
   <packaging>pom</packaging>
 
-  <name>Aggregator POM for Maven Studies</name>
+  <name>Aggregator POM for Shared Components</name>
   <modules>
-    <module>../../../studies/consumer-pom</module>
-    <module>../../../studies/maven-basedir-filesystem</module>
-    <module>../../../studies/maven-ci-extension</module>
-    <module>../../../studies/maven-default-plugins</module>
-    <module>../../../studies/maven-eventsound-extension</module>
-    <module>../../../studies/maven-extension-demo</module>
+    <module>archiver</module>
+    <module>common-artifact-filters</module>
+    <module>dependency-analyzer</module>
+    <module>dependency-tree</module>
+    <module>file-management</module>
+    <module>filtering</module>
+    <module>invoker</module>
+    <module>jarsigner</module>
+    <module>mapping</module>
+    <module>reporting-api</module>
+    <module>reporting-exec</module>
+    <module>reporting-impl</module>
+    <module>script-interpreter</module>
+    <module>shared-incremental</module>
+    <module>shared-io</module>
+    <module>shared-jar</module>
+    <module>shared-resources</module>
+    <module>shared-utils</module>
+    <module>verifier</module>
   </modules>
 </project>

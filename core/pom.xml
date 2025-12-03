@@ -24,23 +24,21 @@ under the License.
 
   <parent>
     <groupId>org.apache.maven.aggregator</groupId>
-    <artifactId>plexus</artifactId>
+    <artifactId>maven-aggregator</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>plexus-components</artifactId>
+  <artifactId>core</artifactId>
   <packaging>pom</packaging>
 
-  <name>Aggregator POM for Plexus Components</name>
+  <name>Aggregator POM for core</name>
   <modules>
-    <module>../../../../plexus/components/compiler</module>
-    <module>../../../../plexus/components/i18n</module>
-    <module>../../../../plexus/components/interpolation</module>
-    <module>../../../../plexus/components/languages</module>
-    <module>../../../../plexus/components/sec-dispatcher</module>
-    <module>../../../../plexus/components/archiver</module>
-    <module>../../../../plexus/components/interactivity</module>
-    <module>../../../../plexus/components/io</module>
-    <module>../../../../plexus/components/resources</module>
-    <module>../../../../plexus/components/velocity</module>
+    <module>build-cache</module>
+    <module>maven</module>
+    <!--module>maven-4.0.x</module-->
+    <module>mvnd</module>
+    <module>resolver</module>
+    <module>resolver-ant-tasks</module>
+    <module>wrapper</module>
+    <!--module>3.x</module-->
   </modules>
 </project>

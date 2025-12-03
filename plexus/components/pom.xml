@@ -24,23 +24,23 @@ under the License.
 
   <parent>
     <groupId>org.apache.maven.aggregator</groupId>
-    <artifactId>plugins</artifactId>
+    <artifactId>plexus</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>plugins-packaging</artifactId>
+  <artifactId>plexus-components</artifactId>
   <packaging>pom</packaging>
 
-  <name>Aggregator POM for Packaging Plugins</name>
+  <name>Aggregator POM for Plexus Components</name>
   <modules>
-    <module>../../../../plugins/packaging/maven-ear-plugin</module>
-    <module>../../../../plugins/packaging/maven-ejb-plugin</module>
-    <module>../../../../plugins/packaging/maven-jar-plugin</module>
-    <module>../../../../plugins/packaging/maven-rar-plugin</module>
-    <module>../../../../plugins/packaging/maven-war-plugin</module>
-    <module>../../../../plugins/packaging/maven-acr-plugin</module>
-    <module>../../../../plugins/packaging/maven-shade-plugin</module>
-    <module>../../../../plugins/packaging/maven-source-plugin</module>
-    <module>../../../../plugins/packaging/maven-jlink-plugin</module>
-    <module>../../../../plugins/packaging/maven-jmod-plugin</module>
+    <module>compiler</module>
+    <module>i18n</module>
+    <module>interpolation</module>
+    <module>languages</module>
+    <module>sec-dispatcher</module>
+    <module>archiver</module>
+    <module>interactivity</module>
+    <module>io</module>
+    <module>resources</module>
+    <module>velocity</module>
   </modules>
 </project>

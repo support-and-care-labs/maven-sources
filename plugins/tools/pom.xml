@@ -24,24 +24,32 @@ under the License.
 
   <parent>
     <groupId>org.apache.maven.aggregator</groupId>
-    <artifactId>maven-aggregator</artifactId>
+    <artifactId>plugins</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>misc</artifactId>
+  <artifactId>plugins-tools</artifactId>
   <packaging>pom</packaging>
 
-  <name>Aggregator POM for misc</name>
+  <name>Aggregator POM for Tools Plugins</name>
   <modules>
-    <module>../../../misc/archetypes</module>
-    <module>../../../misc/dist-tool</module>
-    <module>../../../misc/indexer</module>
-    <!-- not a module: jenkins -->
-    <module>../../../misc/plugin-testing</module>
-    <module>../../../misc/pom/apache</module>
-    <module>../../../misc/pom/apache-resources</module>
-    <module>../../../misc/pom/maven</module>
-    <module>../../../misc/skins/fluido</module>
-    <!-- not a module: studies -->
-    <module>../../../misc/wagon</module>
+    <module>maven-antrun-plugin</module>
+    <module>archetype</module>
+    <module>maven-artifact-plugin</module>
+    <module>maven-assembly-plugin</module>
+    <module>maven-dependency-plugin</module>
+    <module>enforcer</module>
+    <module>maven-gpg-plugin</module>
+    <module>maven-help-plugin</module>
+    <module>maven-invoker-plugin</module>
+    <module>maven-jarsigner-plugin</module>
+    <module>maven-jdeprscan-plugin</module>
+    <module>plugin-tools</module>
+    <module>release</module>
+    <module>maven-remote-resources-plugin</module>
+    <module>scm</module>
+    <module>maven-scm-publish-plugin</module>
+    <module>maven-scripting-plugin</module>
+    <module>maven-stage-plugin</module>
+    <module>maven-toolchains-plugin</module>
   </modules>
 </project>

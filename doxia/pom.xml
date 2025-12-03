@@ -24,22 +24,19 @@ under the License.
 
   <parent>
     <groupId>org.apache.maven.aggregator</groupId>
-    <artifactId>plugins</artifactId>
+    <artifactId>maven-aggregator</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>plugins-reporting</artifactId>
+  <artifactId>doxia</artifactId>
   <packaging>pom</packaging>
 
-  <name>Aggregator POM for Reporting Plugins</name>
+  <name>Aggregator POM for Doxia</name>
   <modules>
-    <module>../../../../plugins/reporting/maven-changelog-plugin</module>
-    <module>../../../../plugins/reporting/maven-changes-plugin</module>
-    <module>../../../../plugins/reporting/maven-checkstyle-plugin</module>
-    <module>../../../../plugins/reporting/maven-doap-plugin</module>
-    <module>../../../../plugins/reporting/maven-javadoc-plugin</module>
-    <module>../../../../plugins/reporting/maven-jdeps-plugin</module>
-    <module>../../../../plugins/reporting/jxr</module>
-    <module>../../../../plugins/reporting/maven-pmd-plugin</module>
-    <module>../../../../plugins/reporting/maven-project-info-reports-plugin</module>
+    <module>doxia</module>
+    <module>site</module>
+    <module>sitetools</module>
+    <module>tools/doxia-book-maven-plugin</module>
+    <module>tools/converter</module>
+    <module>tools/linkcheck</module>
   </modules>
 </project>

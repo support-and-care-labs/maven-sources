@@ -27,16 +27,18 @@ under the License.
     <artifactId>maven-aggregator</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>doxia</artifactId>
+  <artifactId>plexus</artifactId>
   <packaging>pom</packaging>
 
-  <name>Aggregator POM for Doxia</name>
+  <name>Aggregator POM for Plexus</name>
   <modules>
-    <module>../../../doxia/doxia</module>
-    <module>../../../doxia/site</module>
-    <module>../../../doxia/sitetools</module>
-    <module>../../../doxia/tools/doxia-book-maven-plugin</module>
-    <module>../../../doxia/tools/converter</module>
-    <module>../../../doxia/tools/linkcheck</module>
+    <module>classworlds</module>
+    <module>codehaus-plexus.github.io</module>
+    <module>components</module>
+    <module>modello</module>
+    <module>pom/plexus</module>
+    <module>testing</module>
+    <module>utils</module>
+    <module>xml</module>
   </modules>
 </project>
