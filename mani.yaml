@@ -1,0 +1,696 @@
+# Mani configuration for Apache Maven multi-repository build
+# https://github.com/alajmo/mani
+
+# This is the root repository - maven-sources.git
+# It contains the aggregator POMs and manifest configuration
+
+projects:
+  # Site
+  site:
+    path: site
+    url: https://github.com/apache/maven-site.git
+    clone: shallow
+
+  # Core projects
+  core/build-cache:
+    path: core/build-cache
+    url: https://github.com/apache/maven-build-cache-extension.git
+    clone: shallow
+
+  core/maven:
+    path: core/maven
+    url: https://github.com/apache/maven.git
+    clone: shallow
+
+  core/maven-4.0.x:
+    path: core/maven-4.0.x
+    url: https://github.com/apache/maven.git
+    clone: shallow
+    branch: maven-4.0.x
+
+  core/mvnd:
+    path: core/mvnd
+    url: https://github.com/apache/maven-mvnd.git
+    clone: shallow
+
+  core/resolver:
+    path: core/resolver
+    url: https://github.com/apache/maven-resolver.git
+    clone: shallow
+
+  core/resolver-ant-tasks:
+    path: core/resolver-ant-tasks
+    url: https://github.com/apache/maven-resolver-ant-tasks.git
+    clone: shallow
+
+  core/wrapper:
+    path: core/wrapper
+    url: https://github.com/apache/maven-wrapper.git
+    clone: shallow
+
+  # Core 3.x versions
+  core/3.x/maven-3:
+    path: core/3.x/maven-3
+    url: https://github.com/apache/maven.git
+    clone: shallow
+    branch: maven-3.9.x
+
+  core/3.x/mvnd-1:
+    path: core/3.x/mvnd-1
+    url: https://github.com/apache/maven-mvnd.git
+    clone: shallow
+    branch: mvnd-1.x
+
+  core/3.x/resolver-1:
+    path: core/3.x/resolver-1
+    url: https://github.com/apache/maven-resolver.git
+    clone: shallow
+    branch: maven-resolver-1.9.x
+
+  core/3.x/its-3:
+    path: core/3.x/its-3
+    url: https://github.com/apache/maven-integration-testing.git
+    clone: shallow
+    branch: maven-3.9.x
+
+  # Core plugins
+  plugins/core/maven-clean-plugin:
+    path: plugins/core/maven-clean-plugin
+    url: https://github.com/apache/maven-clean-plugin.git
+    clone: shallow
+    branch: maven-clean-plugin-3.x
+
+  plugins/core/maven-compiler-plugin:
+    path: plugins/core/maven-compiler-plugin
+    url: https://github.com/apache/maven-compiler-plugin.git
+    clone: shallow
+    branch: maven-compiler-plugin-3.x
+
+  plugins/core/maven-deploy-plugin:
+    path: plugins/core/maven-deploy-plugin
+    url: https://github.com/apache/maven-deploy-plugin.git
+    clone: shallow
+    branch: maven-deploy-plugin-3.x
+
+  plugins/core/maven-install-plugin:
+    path: plugins/core/maven-install-plugin
+    url: https://github.com/apache/maven-install-plugin.git
+    clone: shallow
+    branch: maven-install-plugin-3.x
+
+  plugins/core/maven-resources-plugin:
+    path: plugins/core/maven-resources-plugin
+    url: https://github.com/apache/maven-resources-plugin.git
+    clone: shallow
+    branch: maven-resources-plugin-3.x
+
+  plugins/core/maven-site-plugin:
+    path: plugins/core/maven-site-plugin
+    url: https://github.com/apache/maven-site-plugin.git
+    clone: shallow
+    branch: maven-site-plugin-3.x
+
+  plugins/core/surefire:
+    path: plugins/core/surefire
+    url: https://github.com/apache/maven-surefire.git
+    clone: shallow
+
+  plugins/core/maven-verifier-plugin:
+    path: plugins/core/maven-verifier-plugin
+    url: https://github.com/apache/maven-verifier-plugin.git
+    clone: shallow
+
+  # Core plugins v4
+  plugins/core-4/maven-clean-plugin:
+    path: plugins/core-4/maven-clean-plugin
+    url: https://github.com/apache/maven-clean-plugin.git
+    clone: shallow
+
+  plugins/core-4/maven-compiler-plugin:
+    path: plugins/core-4/maven-compiler-plugin
+    url: https://github.com/apache/maven-compiler-plugin.git
+    clone: shallow
+
+  plugins/core-4/maven-deploy-plugin:
+    path: plugins/core-4/maven-deploy-plugin
+    url: https://github.com/apache/maven-deploy-plugin.git
+    clone: shallow
+
+  plugins/core-4/maven-install-plugin:
+    path: plugins/core-4/maven-install-plugin
+    url: https://github.com/apache/maven-install-plugin.git
+    clone: shallow
+
+  plugins/core-4/maven-resources-plugin:
+    path: plugins/core-4/maven-resources-plugin
+    url: https://github.com/apache/maven-resources-plugin.git
+    clone: shallow
+
+  plugins/core-4/maven-site-plugin:
+    path: plugins/core-4/maven-site-plugin
+    url: https://github.com/apache/maven-site-plugin.git
+    clone: shallow
+
+  # Packaging plugins
+  plugins/packaging/maven-ear-plugin:
+    path: plugins/packaging/maven-ear-plugin
+    url: https://github.com/apache/maven-ear-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-ejb-plugin:
+    path: plugins/packaging/maven-ejb-plugin
+    url: https://github.com/apache/maven-ejb-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-jar-plugin:
+    path: plugins/packaging/maven-jar-plugin
+    url: https://github.com/apache/maven-jar-plugin.git
+    clone: shallow
+    branch: maven-jar-plugin-3.x
+
+  plugins/packaging/maven-rar-plugin:
+    path: plugins/packaging/maven-rar-plugin
+    url: https://github.com/apache/maven-rar-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-war-plugin:
+    path: plugins/packaging/maven-war-plugin
+    url: https://github.com/apache/maven-war-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-acr-plugin:
+    path: plugins/packaging/maven-acr-plugin
+    url: https://github.com/apache/maven-acr-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-shade-plugin:
+    path: plugins/packaging/maven-shade-plugin
+    url: https://github.com/apache/maven-shade-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-source-plugin:
+    path: plugins/packaging/maven-source-plugin
+    url: https://github.com/apache/maven-source-plugin.git
+    clone: shallow
+    branch: maven-source-plugin-3.x
+
+  plugins/packaging/maven-jlink-plugin:
+    path: plugins/packaging/maven-jlink-plugin
+    url: https://github.com/apache/maven-jlink-plugin.git
+    clone: shallow
+
+  plugins/packaging/maven-jmod-plugin:
+    path: plugins/packaging/maven-jmod-plugin
+    url: https://github.com/apache/maven-jmod-plugin.git
+    clone: shallow
+
+  # Packaging plugins v4
+  plugins/packaging-4/maven-jar-plugin:
+    path: plugins/packaging-4/maven-jar-plugin
+    url: https://github.com/apache/maven-jar-plugin.git
+    clone: shallow
+
+  plugins/packaging-4/maven-source-plugin:
+    path: plugins/packaging-4/maven-source-plugin
+    url: https://github.com/apache/maven-source-plugin.git
+    clone: shallow
+
+  # Reporting plugins
+  plugins/reporting/maven-changelog-plugin:
+    path: plugins/reporting/maven-changelog-plugin
+    url: https://github.com/apache/maven-changelog-plugin.git
+    clone: shallow
+
+  plugins/reporting/maven-changes-plugin:
+    path: plugins/reporting/maven-changes-plugin
+    url: https://github.com/apache/maven-changes-plugin.git
+    clone: shallow
+
+  plugins/reporting/maven-checkstyle-plugin:
+    path: plugins/reporting/maven-checkstyle-plugin
+    url: https://github.com/apache/maven-checkstyle-plugin.git
+    clone: shallow
+
+  plugins/reporting/maven-doap-plugin:
+    path: plugins/reporting/maven-doap-plugin
+    url: https://github.com/apache/maven-doap-plugin.git
+    clone: shallow
+
+  plugins/reporting/maven-javadoc-plugin:
+    path: plugins/reporting/maven-javadoc-plugin
+    url: https://github.com/apache/maven-javadoc-plugin.git
+    clone: shallow
+
+  plugins/reporting/maven-jdeps-plugin:
+    path: plugins/reporting/maven-jdeps-plugin
+    url: https://github.com/apache/maven-jdeps-plugin.git
+    clone: shallow
+
+  plugins/reporting/jxr:
+    path: plugins/reporting/jxr
+    url: https://github.com/apache/maven-jxr.git
+    clone: shallow
+
+  plugins/reporting/maven-pmd-plugin:
+    path: plugins/reporting/maven-pmd-plugin
+    url: https://github.com/apache/maven-pmd-plugin.git
+    clone: shallow
+
+  plugins/reporting/maven-project-info-reports-plugin:
+    path: plugins/reporting/maven-project-info-reports-plugin
+    url: https://github.com/apache/maven-project-info-reports-plugin.git
+    clone: shallow
+
+  # Tool plugins
+  plugins/tools/maven-antrun-plugin:
+    path: plugins/tools/maven-antrun-plugin
+    url: https://github.com/apache/maven-antrun-plugin.git
+    clone: shallow
+
+  plugins/tools/archetype:
+    path: plugins/tools/archetype
+    url: https://github.com/apache/maven-archetype.git
+    clone: shallow
+
+  plugins/tools/maven-artifact-plugin:
+    path: plugins/tools/maven-artifact-plugin
+    url: https://github.com/apache/maven-artifact-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-assembly-plugin:
+    path: plugins/tools/maven-assembly-plugin
+    url: https://github.com/apache/maven-assembly-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-dependency-plugin:
+    path: plugins/tools/maven-dependency-plugin
+    url: https://github.com/apache/maven-dependency-plugin.git
+    clone: shallow
+
+  plugins/tools/enforcer:
+    path: plugins/tools/enforcer
+    url: https://github.com/apache/maven-enforcer.git
+    clone: shallow
+
+  plugins/tools/maven-gpg-plugin:
+    path: plugins/tools/maven-gpg-plugin
+    url: https://github.com/apache/maven-gpg-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-help-plugin:
+    path: plugins/tools/maven-help-plugin
+    url: https://github.com/apache/maven-help-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-invoker-plugin:
+    path: plugins/tools/maven-invoker-plugin
+    url: https://github.com/apache/maven-invoker-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-jarsigner-plugin:
+    path: plugins/tools/maven-jarsigner-plugin
+    url: https://github.com/apache/maven-jarsigner-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-jdeprscan-plugin:
+    path: plugins/tools/maven-jdeprscan-plugin
+    url: https://github.com/apache/maven-jdeprscan-plugin.git
+    clone: shallow
+
+  plugins/tools/plugin-tools:
+    path: plugins/tools/plugin-tools
+    url: https://github.com/apache/maven-plugin-tools.git
+    clone: shallow
+
+  plugins/tools/release:
+    path: plugins/tools/release
+    url: https://github.com/apache/maven-release.git
+    clone: shallow
+
+  plugins/tools/maven-remote-resources-plugin:
+    path: plugins/tools/maven-remote-resources-plugin
+    url: https://github.com/apache/maven-remote-resources-plugin.git
+    clone: shallow
+
+  plugins/tools/scm:
+    path: plugins/tools/scm
+    url: https://github.com/apache/maven-scm.git
+    clone: shallow
+
+  plugins/tools/maven-scm-publish-plugin:
+    path: plugins/tools/maven-scm-publish-plugin
+    url: https://github.com/apache/maven-scm-publish-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-scripting-plugin:
+    path: plugins/tools/maven-scripting-plugin
+    url: https://github.com/apache/maven-scripting-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-stage-plugin:
+    path: plugins/tools/maven-stage-plugin
+    url: https://github.com/apache/maven-stage-plugin.git
+    clone: shallow
+
+  plugins/tools/maven-toolchains-plugin:
+    path: plugins/tools/maven-toolchains-plugin
+    url: https://github.com/apache/maven-toolchains-plugin.git
+    clone: shallow
+
+  # Shared libraries
+  shared/archiver:
+    path: shared/archiver
+    url: https://github.com/apache/maven-archiver.git
+    clone: shallow
+    branch: maven-archiver-3.x
+
+  shared/common-artifact-filters:
+    path: shared/common-artifact-filters
+    url: https://github.com/apache/maven-common-artifact-filters.git
+    clone: shallow
+
+  shared/dependency-analyzer:
+    path: shared/dependency-analyzer
+    url: https://github.com/apache/maven-dependency-analyzer.git
+    clone: shallow
+
+  shared/dependency-tree:
+    path: shared/dependency-tree
+    url: https://github.com/apache/maven-dependency-tree.git
+    clone: shallow
+
+  shared/file-management:
+    path: shared/file-management
+    url: https://github.com/apache/maven-file-management.git
+    clone: shallow
+
+  shared/filtering:
+    path: shared/filtering
+    url: https://github.com/apache/maven-filtering.git
+    clone: shallow
+    branch: maven-filtering-3.x
+
+  shared/invoker:
+    path: shared/invoker
+    url: https://github.com/apache/maven-invoker.git
+    clone: shallow
+
+  shared/jarsigner:
+    path: shared/jarsigner
+    url: https://github.com/apache/maven-jarsigner.git
+    clone: shallow
+
+  shared/mapping:
+    path: shared/mapping
+    url: https://github.com/apache/maven-mapping.git
+    clone: shallow
+
+  shared/reporting-api:
+    path: shared/reporting-api
+    url: https://github.com/apache/maven-reporting-api.git
+    clone: shallow
+
+  shared/reporting-exec:
+    path: shared/reporting-exec
+    url: https://github.com/apache/maven-reporting-exec.git
+    clone: shallow
+
+  shared/reporting-impl:
+    path: shared/reporting-impl
+    url: https://github.com/apache/maven-reporting-impl.git
+    clone: shallow
+
+  shared/script-interpreter:
+    path: shared/script-interpreter
+    url: https://github.com/apache/maven-script-interpreter.git
+    clone: shallow
+
+  shared/shared-incremental:
+    path: shared/shared-incremental
+    url: https://github.com/apache/maven-shared-incremental.git
+    clone: shallow
+
+  shared/shared-io:
+    path: shared/shared-io
+    url: https://github.com/apache/maven-shared-io.git
+    clone: shallow
+
+  shared/shared-jar:
+    path: shared/shared-jar
+    url: https://github.com/apache/maven-shared-jar.git
+    clone: shallow
+
+  shared/shared-resources:
+    path: shared/shared-resources
+    url: https://github.com/apache/maven-shared-resources.git
+    clone: shallow
+
+  shared/shared-utils:
+    path: shared/shared-utils
+    url: https://github.com/apache/maven-shared-utils.git
+    clone: shallow
+
+  shared/verifier:
+    path: shared/verifier
+    url: https://github.com/apache/maven-verifier.git
+    clone: shallow
+
+  # Shared v4
+  shared-4/archiver:
+    path: shared-4/archiver
+    url: https://github.com/apache/maven-archiver.git
+    clone: shallow
+
+  shared-4/filtering:
+    path: shared-4/filtering
+    url: https://github.com/apache/maven-filtering.git
+    clone: shallow
+
+  # Doxia
+  doxia/doxia:
+    path: doxia/doxia
+    url: https://github.com/apache/maven-doxia.git
+    clone: shallow
+
+  doxia/site:
+    path: doxia/site
+    url: https://github.com/apache/maven-doxia-site.git
+    clone: shallow
+
+  doxia/sitetools:
+    path: doxia/sitetools
+    url: https://github.com/apache/maven-doxia-sitetools.git
+    clone: shallow
+
+  doxia/tools/doxia-book-maven-plugin:
+    path: doxia/tools/doxia-book-maven-plugin
+    url: https://github.com/apache/maven-doxia-book-maven-plugin.git
+    clone: shallow
+
+  doxia/tools/converter:
+    path: doxia/tools/converter
+    url: https://github.com/apache/maven-doxia-converter.git
+    clone: shallow
+
+  # Misc
+  misc/archetypes:
+    path: misc/archetypes
+    url: https://github.com/apache/maven-archetypes.git
+    clone: shallow
+
+  misc/pom/maven:
+    path: misc/pom/maven
+    url: https://github.com/apache/maven-parent.git
+    clone: shallow
+
+  misc/pom/apache:
+    path: misc/pom/apache
+    url: https://github.com/apache/maven-apache-parent.git
+    clone: shallow
+
+  misc/pom/apache-resources:
+    path: misc/pom/apache-resources
+    url: https://github.com/apache/maven-apache-resources.git
+    clone: shallow
+
+  misc/skins/fluido:
+    path: misc/skins/fluido
+    url: https://github.com/apache/maven-fluido-skin.git
+    clone: shallow
+
+  misc/dist-tool:
+    path: misc/dist-tool
+    url: https://github.com/apache/maven-dist-tool.git
+    clone: shallow
+
+  misc/gh-actions-shared/main:
+    path: misc/gh-actions-shared/main
+    url: https://github.com/apache/maven-gh-actions-shared.git
+    clone: shallow
+    branch: main
+
+  misc/gh-actions-shared/v4:
+    path: misc/gh-actions-shared/v4
+    url: https://github.com/apache/maven-gh-actions-shared.git
+    clone: shallow
+    branch: v4
+
+  misc/jenkins/env:
+    path: misc/jenkins/env
+    url: https://github.com/apache/maven-jenkins-env.git
+    clone: shallow
+
+  misc/jenkins/lib:
+    path: misc/jenkins/lib
+    url: https://github.com/apache/maven-jenkins-lib.git
+    clone: shallow
+
+  misc/indexer:
+    path: misc/indexer
+    url: https://github.com/apache/maven-indexer.git
+    clone: shallow
+
+  misc/plugin-testing:
+    path: misc/plugin-testing
+    url: https://github.com/apache/maven-plugin-testing.git
+    clone: shallow
+
+  misc/wagon:
+    path: misc/wagon
+    url: https://github.com/apache/maven-wagon.git
+    clone: shallow
+
+  # Studies
+  studies/master:
+    path: studies/master
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+
+  studies/consumer-pom:
+    path: studies/consumer-pom
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+    branch: consumer-pom
+
+  studies/maven-basedir-filesystem:
+    path: studies/maven-basedir-filesystem
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+    branch: maven-basedir-filesystem
+
+  studies/maven-ci-extension:
+    path: studies/maven-ci-extension
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+    branch: maven-ci-extension
+
+  studies/maven-default-plugins:
+    path: studies/maven-default-plugins
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+    branch: maven-default-plugins
+
+  studies/maven-eventsound-extension:
+    path: studies/maven-eventsound-extension
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+    branch: maven-eventsound-extension
+
+  studies/maven-extension-demo:
+    path: studies/maven-extension-demo
+    url: https://github.com/apache/maven-studies.git
+    clone: shallow
+    branch: maven-extension-demo
+
+  # Plexus
+  plexus/codehaus-plexus.github.io:
+    path: plexus/codehaus-plexus.github.io
+    url: https://github.com/codehaus-plexus/codehaus-plexus.github.io.git
+    clone: shallow
+    branch: source
+
+  plexus/modello:
+    path: plexus/modello
+    url: https://github.com/codehaus-plexus/modello.git
+    clone: shallow
+
+  plexus/classworlds:
+    path: plexus/classworlds
+    url: https://github.com/codehaus-plexus/plexus-classworlds.git
+    clone: shallow
+
+  plexus/components/archiver:
+    path: plexus/components/archiver
+    url: https://github.com/codehaus-plexus/plexus-archiver.git
+    clone: shallow
+
+  plexus/components/compiler:
+    path: plexus/components/compiler
+    url: https://github.com/codehaus-plexus/plexus-compiler.git
+    clone: shallow
+
+  plexus/components/i18n:
+    path: plexus/components/i18n
+    url: https://github.com/codehaus-plexus/plexus-i18n.git
+    clone: shallow
+
+  plexus/components/interactivity:
+    path: plexus/components/interactivity
+    url: https://github.com/codehaus-plexus/plexus-interactivity.git
+    clone: shallow
+
+  plexus/components/interpolation:
+    path: plexus/components/interpolation
+    url: https://github.com/codehaus-plexus/plexus-interpolation.git
+    clone: shallow
+
+  plexus/components/io:
+    path: plexus/components/io
+    url: https://github.com/codehaus-plexus/plexus-io.git
+    clone: shallow
+
+  plexus/components/languages:
+    path: plexus/components/languages
+    url: https://github.com/codehaus-plexus/plexus-languages.git
+    clone: shallow
+
+  plexus/components/resources:
+    path: plexus/components/resources
+    url: https://github.com/codehaus-plexus/plexus-resources.git
+    clone: shallow
+
+  plexus/components/sec-dispatcher:
+    path: plexus/components/sec-dispatcher
+    url: https://github.com/codehaus-plexus/plexus-sec-dispatcher.git
+    clone: shallow
+
+  plexus/components/velocity:
+    path: plexus/components/velocity
+    url: https://github.com/codehaus-plexus/plexus-velocity.git
+    clone: shallow
+
+  plexus/pom/plexus:
+    path: plexus/pom/plexus
+    url: https://github.com/codehaus-plexus/plexus-pom.git
+    clone: shallow
+
+  plexus/testing:
+    path: plexus/testing
+    url: https://github.com/codehaus-plexus/plexus-testing.git
+    clone: shallow
+
+  plexus/utils:
+    path: plexus/utils
+    url: https://github.com/codehaus-plexus/plexus-utils.git
+    clone: shallow
+
+  plexus/xml:
+    path: plexus/xml
+    url: https://github.com/codehaus-plexus/plexus-xml.git
+    clone: shallow
+
+  # Sisu
+  sisu/sisu-project:
+    path: sisu/sisu-project
+    url: https://github.com/eclipse-sisu/sisu-project.git
+    clone: shallow
