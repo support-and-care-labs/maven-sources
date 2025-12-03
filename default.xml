@@ -19,12 +19,14 @@
 -->
 <manifest>
   <remote name='origin'  fetch='https://github.com/apache' />
+  <remote name='fork'    fetch='https://github.com/support-and-care-labs' />
   <remote name='plexus'  fetch='https://github.com/codehaus-plexus' />
   <remote name='svn2git' fetch='https://github.com/apache' />
   <remote name='sisu'    fetch='https://github.com/eclipse-sisu' />
   <default revision='master' remote='origin' sync-j='8' />
 
-  <project path='.'                                         name='maven-sources.git' revision='test-flat-structure' />
+  <!-- Manifest repository checked out to root - uses fork for testing -->
+  <project path='.'                                         name='maven-sources.git' remote='fork' />
   <project path='site'                                      name='maven-site.git' />
 
   <project path='core/build-cache'                          name='maven-build-cache-extension.git' />
